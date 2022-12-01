@@ -1,5 +1,4 @@
 from setuptools import setup
-import stable_whisper
 
 
 def read_me() -> str:

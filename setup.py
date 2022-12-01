@@ -8,7 +8,7 @@ def read_me() -> str:
 
 setup(
     name="stable-ts",
-    version=stable_whisper.__version__,
+    version="1.0.1",
     description="Stabilizing timestamps of OpenAI's Whisper outputs down to word-level.",
     long_description=read_me(),
     long_description_content_type='text/markdown',

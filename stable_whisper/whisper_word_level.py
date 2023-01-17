@@ -183,7 +183,8 @@ def transcribe_word_level(
         segment = pad_or_trim(mel, N_FRAMES).to(model.device).to(dtype)
         _, probs = model.detect_language(segment)
         decode_options["language"] = max(probs, key=probs.get)
-        print(f"Detected language: {LANGUAGES[decode_options['language']]}")
+        if verbose is not None:
+            print(f"Detected language: {LANGUAGES[decode_options['language']]}")
 
     mel = mel.unsqueeze(0)
     language = decode_options["language"]
